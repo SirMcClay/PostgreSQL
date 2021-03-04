@@ -1,3 +1,10 @@
+-- FAST RULES TO USE NUMERIC TYPES
+  -- SERIAL - Use for the id column primary key of any table
+  -- INTEGER - Need to store a number without a decimal
+  -- NUMERIC OR DECIMAL - Need to store a number with decimal and very accurate
+  -- DOUBLE PRECISION - Need to store a number with decimal but the decimal
+    -- doesn`t make a big diference
+
 -- Little trick to play with numeric types on Postgres pgAdmin
   -- Just launch Query Tool on postgres database and write querys like below
 
