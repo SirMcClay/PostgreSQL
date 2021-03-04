@@ -1,4 +1,18 @@
 -- FAST RULES TO BOOLEAN TYPE
-  -- TRUE - true, yes, 'yes', 1, t, y
-  -- FALSE - false, no, 'no', 0, f, n
+  -- TRUE - true, 'true', 't', 'yes', 'y', 1
+  -- FALSE - false, 'false', 'f', 'no', 'n', 0
   -- null - NULL
+
+-- All true
+SELECT (true::BOOLEAN);
+SELECT ('true'::BOOLEAN);
+SELECT ('t'::BOOLEAN);
+SELECT ('y'::BOOLEAN);
+SELECT (1::BOOLEAN);
+
+-- All false
+SELECT (false::BOOLEAN);
+SELECT ('false'::BOOLEAN);
+SELECT ('f'::BOOLEAN);
+SELECT ('n'::BOOLEAN);
+SELECT (0::BOOLEAN);
