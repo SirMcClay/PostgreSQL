@@ -11,3 +11,6 @@ SELECT (999999999999999::SMALLINT);
 -- An subtraction using float point numbers assigned as REAL type and receive
   -- an odd precision result
 SELECT (1.99999::REAL - 1.99998::REAL);
+
+-- IMPORTANT!!! Use DECIMAL and NUMERIC every time you need a number or 
+  -- calculation 100% precise you want to use this two types
