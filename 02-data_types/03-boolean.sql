@@ -16,3 +16,6 @@ SELECT ('false'::BOOLEAN);
 SELECT ('f'::BOOLEAN);
 SELECT ('n'::BOOLEAN);
 SELECT (0::BOOLEAN);
+
+-- Not value, not true and not false, just NULL
+SELECT (NULL::BOOLEAN);
