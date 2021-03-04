@@ -5,3 +5,7 @@
   -- VARCHAR(40) - Store a string up to 40 characters automatically remove
     -- extra characters
   -- TEXT - Store any length of string
+
+-- CHAR(N) - Store 'l  ' and 'llsjlfjsklfjs'
+  SELECT ('l'::CHAR(3));
+  SELECT ('llsjlfjsklfjs'::CHAR(3));
