@@ -1,0 +1,4 @@
+-- FAST RULES TO BOOLEAN TYPE
+  -- TRUE - true, yes, 'yes', 1, t, y
+  -- FALSE - false, no, 'no', 0, f, n
+  -- null - NULL
