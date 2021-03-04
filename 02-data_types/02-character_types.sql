@@ -16,3 +16,6 @@
 
 -- TEXT - Store any length of just characters you need 'alsdjflkslsjlkfjsklfjlksjflk'
   SELECT ('alsdjflkslsjlkfjsklfjlksjflk'::TEXT);
+
+-- TIP - Use VARCHAR(N) to guarantee that you dont have accidentally a too long
+  -- text entry
