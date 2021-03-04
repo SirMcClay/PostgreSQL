@@ -11,5 +11,8 @@
   SELECT ('llsjlfjsklfjs'::CHAR(3));
 
 -- VARCHAR(5) - Store 'a' and 'lsdkj' and not extra spaces just the charecters
-SELECT ('a'::VARCHAR(5));
-SELECT ('lsdkjflskdjfklsdjflksdjfa'::VARCHAR(5));
+  SELECT ('a'::VARCHAR(5));
+  SELECT ('lsdkjflskdjfklsdjflksdjfa'::VARCHAR(5));
+
+-- TEXT - Store any length of just characters you need 'alsdjflkslsjlkfjsklfjlksjflk'
+  SELECT ('alsdjflkslsjlkfjsklfjlksjflk'::TEXT);
