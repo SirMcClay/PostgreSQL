@@ -5,5 +5,9 @@
   -- the result is 2 as integer
 SELECT (2.0::INTEGER);
 
--- Force overflow on SMALLINT data type
+-- Force overflow on SMALLINT data type and we receive an error
 SELECT (999999999999999::SMALLINT);
+
+-- An subtraction using float point numbers assigned as REAL type and receive
+  -- an odd precision result
+SELECT (1.99999::REAL - 1.99998::REAL);
