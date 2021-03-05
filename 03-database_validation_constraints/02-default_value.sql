@@ -4,3 +4,6 @@ ALTER TABLE products
 ALTER COLUMN price
 SET DEFAULT 999;
 
+-- So insert a product without price
+INSERT INTO products (name, department, weight)
+VALUES ('Gloves', 'Tools', 1);
