@@ -11,3 +11,8 @@ CREATE TABLE products (
 INSERT INTO products (name, department, price, weight)
 VALUES
 	('Shirt', 'Clothes', 20, 1);
+
+-- Insert a product without a price (may be a problem in future time)
+INSERT INTO products (name, department, weight)
+VALUES
+	('Pants', 'Clothes', 3);
