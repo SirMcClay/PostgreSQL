@@ -1,0 +1,22 @@
+-- Here we going to constraint compare values using >, <, >=, <=, =
+
+-- We can update our table products inserting this price check
+ALTER TABLE products
+ADD CHECK (price > 0);
+-- GOTCHA!! You cant do this alter if there are a row with column price equal 
+  -- or less than 0
+
+-- Now we try to insert a row with price less than zero and we got an error
+INSERT INTO products (name, department, price, weight)
+VALUES ('Belt', 'House', -99, 1);
+
+-- The same apply to other tests
+
+-- Now we create a new table called orders and implement a multi column check
+CREATE TABLE orders (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(40) NOT NULL,
+	created_at TIMESTAMP NOT NULL,
+	est_delivery TIMESTAMP NOT NULL,
+	CHECK (created_at < est_delivery)
+);
