@@ -20,3 +20,8 @@ CREATE TABLE orders (
 	est_delivery TIMESTAMP NOT NULL,
 	CHECK (created_at < est_delivery)
 );
+
+-- Now try to inser a order where est_delivery is before created_at which broke
+  -- our check constraint and surely we got an db error
+INSERT INTO orders (name, created_at, est_delivery)
+VALUES ('Shirt', '2000-NOV-20 01:00 AM', '2000-NOV-10 01:00 AM');
