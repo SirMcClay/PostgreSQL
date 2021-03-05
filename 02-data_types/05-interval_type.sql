@@ -5,6 +5,8 @@
 
 -- TIP!! Store INTERVAL on a database is not much useful but do calculations
   -- on DATE, TIME, TIMESTAMP are really great and very useful!
+  -- And be able to do this kind of calculaions directly on database is fantastic
+  -- because we dont need a server side library to do this stuff
 
 -- Some examples
 SELECT ('1 day'::INTERVAL); => 1 day
@@ -21,4 +23,7 @@ SELECT
 	('NOV-20-1980 1:23 AM EST'::TIMESTAMP WITH TIME ZONE)
 	- 
 	('4 D'::INTERVAL); => 1980-11-16 06:23:00+00
-
+SELECT 
+	('NOV-20-1980 1:23 AM EST'::TIMESTAMP WITH TIME ZONE)
+	- 
+	('NOV-10-1980 5:43 AM PST'::TIMESTAMP WITH TIME ZONE); => 9 days 16:40:00
