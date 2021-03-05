@@ -22,3 +22,9 @@ VALUES
 ALTER TABLE products
 ALTER COLUMN price
 SET NOT NULL;
+
+-- Update all rows from price NULL to price 9999
+UPDATE products
+SET price = 9999
+WHERE price IS NULL;
+
