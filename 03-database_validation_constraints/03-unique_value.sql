@@ -19,3 +19,7 @@ ADD UNIQUE (name);
 INSERT INTO products (name, department, price, weight)
 VALUES ('Shirt', 'Tools', 24, 1);
 => db error
+
+-- To remove unique constraint just use this
+ALTER TABLE products
+DROP CONSTRAINT products_name_key;
