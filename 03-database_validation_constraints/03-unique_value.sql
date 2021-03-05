@@ -27,3 +27,14 @@ DROP CONSTRAINT products_name_key;
 -- To set multi column unique constraint do like this
 ALTER TABLE products
 ADD UNIQUE (name, department);
+-- this tie the column uniqueness just if both columns are inserted with the
+  -- values equal to a identical name and department row
+
+-- This insert is ok because the duo are not the same of an existing row
+INSERT INTO products (name, department, price, weight)
+VALUES ('Shirt', 'Housewares', 24, 1);
+
+-- But with this below the table just have a row with this combination of values
+  -- for name and department columns and then trown an error
+INSERT INTO products (name, department, price, weight)
+VALUES ('Shirt', 'Clothes', 24, 1);
