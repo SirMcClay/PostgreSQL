@@ -28,3 +28,9 @@ UPDATE products
 SET price = 9999
 WHERE price IS NULL;
 
+-- Now we can run our ALTER TABLE above with no problems
+
+-- Now we try to insert a new product to our products table and will see an error
+  -- that our constraint was violated
+INSERT INTO products (name, department, weight)
+VALUES ('Shoes', 'Clothes', 5);
