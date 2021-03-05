@@ -23,3 +23,7 @@ VALUES ('Shirt', 'Tools', 24, 1);
 -- To remove unique constraint just use this
 ALTER TABLE products
 DROP CONSTRAINT products_name_key;
+
+-- To set multi column unique constraint do like this
+ALTER TABLE products
+ADD UNIQUE (name, department);
