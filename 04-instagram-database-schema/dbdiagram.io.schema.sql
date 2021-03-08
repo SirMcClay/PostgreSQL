@@ -57,3 +57,9 @@ table hashtags {
   created_at TIMESTAMP
   title VARCHAR(20)
 }
+
+table hashtags_posts {
+  id SERIAL [pk, increment]
+  hashtag_id INTEGER [ref: > hashtags.id]
+  post_id INTEGER [ref: > posts.id]
+}
