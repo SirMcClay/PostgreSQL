@@ -5,6 +5,12 @@ table users {
   created_at TIMESTAMP
   updated_at TIMESTAMP
   username VARCHAR(30)
+  bio VARCHAR(400)
+  avatar VARCHAR(200)
+  phone VARCHAR(25)
+  email VARCHAR(40)
+  password VARCHAR(50)
+  status VARCHAR(15)
 }
 
 table posts {
