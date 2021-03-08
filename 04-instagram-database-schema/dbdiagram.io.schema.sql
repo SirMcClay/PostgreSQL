@@ -44,3 +44,10 @@ table photo_tags {
   x INTEGER
   y INTEGER
 }
+
+table caption_tags {
+  id SERIAL [pk, increment]
+  created_at TIMESTAMP
+  post_id INTEGER [ref: > posts.id]
+  user_id INTEGER [ref: > users.id]
+}
