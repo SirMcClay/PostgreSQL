@@ -34,3 +34,13 @@ table likes {
   comment_id INTEGER [ref: > comments.id]
   post_id INTEGER [ref: > posts.id]
 }
+
+table photo_tags {
+  id SERIAL [pk, increment]
+  created_at TIMESTAMP
+  updated_at TIMESTAMP
+  post_id INTEGER [ref: > posts.id]
+  user_id INTEGER [ref: > users.id]
+  x INTEGER
+  y INTEGER
+}
