@@ -17,3 +17,7 @@ FROM pg_class;
   -- How to create a INDEX
   CREATE INDEX ON users (username);
   -- This query above creates a INDEX of our users table username propertie
+  CREATE INDEX <your-name-for-index> ON users (username);
+  -- The above query is to you create a custom name for your index - We highly
+    -- recommend you to keep the default conventions
+  
