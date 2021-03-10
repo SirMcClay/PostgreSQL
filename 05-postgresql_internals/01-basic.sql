@@ -22,3 +22,9 @@ FROM pg_class;
     -- recommend you to keep the default conventions
   -- To delete a INDEX proceed like below:
   DROP INDEX users_username_idx;
+
+-- EXPLAIN ANALYSE before a query give us a tool to analyse and benchmark the
+  -- database performance becouse show to us the times to execute querys
+EXPLAIN ANALYSE SELECT *
+FROM users
+WHERE username = 'Emil30';
