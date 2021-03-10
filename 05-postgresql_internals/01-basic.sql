@@ -13,3 +13,7 @@ FROM pg_class;
 -- Block / page - contains a collection of data aggregate on tuples or rows
 -- Tuple / row - a unit of data row of our table
 
+-- INDEX - A tool to speedup some type of querys
+  -- How to create a INDEX
+  CREATE INDEX ON users (username);
+  -- This query above creates a INDEX of our users table username propertie
