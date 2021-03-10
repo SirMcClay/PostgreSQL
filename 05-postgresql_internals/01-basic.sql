@@ -20,4 +20,5 @@ FROM pg_class;
   CREATE INDEX <your-name-for-index> ON users (username);
   -- The above query is to you create a custom name for your index - We highly
     -- recommend you to keep the default conventions
-  
+  -- To delete a INDEX proceed like below:
+  DROP INDEX users_username_idx;
