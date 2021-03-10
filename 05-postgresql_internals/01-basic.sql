@@ -24,6 +24,12 @@ FROM pg_class;
     -- recommend you to keep the default conventions
   -- NOTE!! You never need to create a index to a primary key or to a UNIQUE
     -- column of a table
+    -- If you want to see the indexes automatically created run the query like
+      -- below:
+      SELECT relname, relkind
+      FROM pg_class
+      WHERE relkind = 'i';
+
   -- To delete a INDEX proceed like below:
   DROP INDEX users_username_idx;
 
