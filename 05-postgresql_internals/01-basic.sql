@@ -23,6 +23,9 @@ FROM pg_class;
   -- To delete a INDEX proceed like below:
   DROP INDEX users_username_idx;
 
+  -- To see the size of a table, index, or so... on hard disk
+  SELECT pg_size_pretty(pg_relation_size('users'));
+
 -- EXPLAIN ANALYSE before a query give us a tool to analyse and benchmark the
   -- database performance becouse show to us the times to execute querys
 EXPLAIN ANALYSE SELECT *
