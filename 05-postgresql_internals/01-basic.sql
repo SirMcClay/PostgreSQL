@@ -14,6 +14,8 @@ FROM pg_class;
 -- Tuple / row - a unit of data row of our table
 
 -- INDEX - A tool to speedup some type of querys
+  -- NOTE!!! A majority of indexes are of type B-TREE, although the existence of
+    -- a bunch of types of indexes for a large spread of specialized uses
   -- How to create a INDEX
   CREATE INDEX ON users (username);
   -- This query above creates a INDEX of our users table username propertie
