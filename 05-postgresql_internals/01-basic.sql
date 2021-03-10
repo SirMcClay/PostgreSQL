@@ -8,3 +8,8 @@ FROM pg_database;
 -- Show all files and objects, etc which are related to a database that you query
 SELECT *
 FROM pg_class;
+
+-- Heap file - contains a collection of data aggregate on blocks
+-- Block / page - contains a collection of data aggregate on tuples or rows
+-- Tuple / row - a unit of data row of our table
+
