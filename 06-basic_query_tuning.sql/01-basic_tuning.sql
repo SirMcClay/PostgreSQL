@@ -1,0 +1,14 @@
+-- For tuning we must understand how a query is processed
+  -- A query goes through:
+    -- PARSER
+      -- Interpret every character inside a query to take a meaning
+      -- sees if all are valid keywords and build a query tree - a programaticaly
+      -- description of a query you trying to run
+    -- REWRITER
+      -- Decompose views into underlying table references - for more performance
+      -- purposes
+    -- PLANNER
+      -- Take some strategies to run the query and decides which choose and run
+      -- focusing in better performance and fastest results
+    -- EXECUTER
+      -- Here query actually run!
