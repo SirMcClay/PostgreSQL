@@ -21,3 +21,16 @@
   EXPLAIN
   -- EXPLAIN ANALYZE - Build a query plan, run it, and display info about it
   EXPLAIN ANALYZE
+
+-- EXAMPLE:
+EXPLAIN SELECT username, contents
+FROM users
+JOIN comments ON comments.user_id = users.id
+WHERE username = 'Alyson14';
+
+EXPLAIN ANALYZE SELECT username, contents
+FROM users
+JOIN comments ON comments.user_id = users.id
+WHERE username = 'Alyson14';
+
+-- This two similar examples shown us the benchmark for the two types of analises
