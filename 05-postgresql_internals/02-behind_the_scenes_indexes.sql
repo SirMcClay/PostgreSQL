@@ -11,3 +11,8 @@ FROM bt_metap('users_username_idx');
 -- Getting all items of a b-tree from an index and an especific page
 SELECT *
 FROM bt_page_items('users_username_idx', 3);
+
+-- Shown all information about a user and your ctid
+SELECT ctid, *
+FROM users
+WHERE username = 'Aaliyah.Hintz';
