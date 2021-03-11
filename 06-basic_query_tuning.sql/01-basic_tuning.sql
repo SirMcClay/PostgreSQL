@@ -15,3 +15,9 @@
 
 -- The most important step is PLANNER that will gives us the insight to take a
   -- look of what is the most efficient strategy to run querys
+
+-- THE TOOLS
+  -- EXPLAIN - Build a query plan and display info about it
+  EXPLAIN
+  -- EXPLAIN ANALYZE - Build a query plan, run it, and display info about it
+  EXPLAIN ANALYZE
