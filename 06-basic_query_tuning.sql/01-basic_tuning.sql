@@ -1,14 +1,17 @@
 -- For tuning we must understand how a query is processed
   -- A query goes through:
-    -- PARSER
+    -- STEP 1 - PARSER
       -- Interpret every character inside a query to take a meaning
       -- sees if all are valid keywords and build a query tree - a programaticaly
       -- description of a query you trying to run
-    -- REWRITER
+    -- STEP 2 - REWRITER
       -- Decompose views into underlying table references - for more performance
       -- purposes
-    -- PLANNER
+    -- STEP 3 - PLANNER
       -- Take some strategies to run the query and decides which choose and run
       -- focusing in better performance and fastest results
-    -- EXECUTER
+    -- STEP 4 - EXECUTER
       -- Here query actually run!
+
+-- The most important step is PLANNER that will gives us the insight to take a
+  -- look of what is the most efficient strategy to run querys
