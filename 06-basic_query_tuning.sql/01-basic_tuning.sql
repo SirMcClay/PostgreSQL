@@ -34,3 +34,8 @@ JOIN comments ON comments.user_id = users.id
 WHERE username = 'Alyson14';
 
 -- This two similar examples shown us the benchmark for the two types of analises
+
+-- TO SEE SOME STATISTICS
+SELECT *
+FROM pg_stats
+WHERE tablename = 'users';
