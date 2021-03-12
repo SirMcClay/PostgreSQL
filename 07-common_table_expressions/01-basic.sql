@@ -32,3 +32,11 @@ JOIN tags ON tags.user_id = users.id
 WHERE tags.created_at < '2010-01-07';
 
 -- HUH!! Way more clear!
+
+-- RULES:
+  -- DEFINED with the use of keyword "WITH" berofe the main query
+  -- PRODUCES a table that we can refer to anywhere else
+  -- Can be used on TWO FORMS
+    -- Simple used to make a query more easier to understand
+    -- Recursive form used to write queries that are otherwise impossible to
+      -- write
