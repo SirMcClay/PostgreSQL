@@ -39,3 +39,10 @@ WHERE username = 'Alyson14';
 SELECT *
 FROM pg_stats
 WHERE tablename = 'users';
+
+-- LONG STORY SHORT:
+  -- Every time that you write a query try to run a EXPLAIN to see if Postgre
+  -- will use a sequencial scan or use a index to do the work.
+  -- If on the majority of situations of the query you write the Postgre use
+    -- essentially the sequential scan them you probably dont need a index
+    -- so, drop the index for performance gain
