@@ -40,3 +40,9 @@ WHERE tags.created_at < '2010-01-07';
     -- Simple used to make a query more easier to understand
     -- Recursive form used to write queries that are otherwise impossible to
       -- write
+
+-- NOTE ABOUT PERFORMANCE:
+  -- If you use EXPLAIN on the first and the second (with CTE) querys you will
+  -- see that thet strategy planner to execute is the same. In other words
+  -- the CTE have no impact over performance is really just for easier read
+  -- and understand about the querys syntax
