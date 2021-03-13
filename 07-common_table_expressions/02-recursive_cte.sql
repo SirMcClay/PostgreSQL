@@ -78,3 +78,5 @@ LIMIT 5;
     -- And we join table users with suggestions where leader_id is equal to
     -- users.id and return columns users.id and users.username
   
+-- IN SHORT: Everytime you need to deal with data hierarchy the recursive CTE is
+  -- a possible handy resource to you to solve your problem
