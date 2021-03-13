@@ -57,4 +57,10 @@ LIMIT 5;
   -- STEP 1: We define our results and working table
     -- Which have 3 column each with leader_id, follower_id and depth
     -- And of course the name of our recursive CTE which is suggestions
+  -- STEP 2: We will run our NON-RECURSIVE-STATEMENT - On we take leader_id
+    -- follower_id from table followers in which the follower_id is 1000
+    -- and assign depth as a fixed value of 1 for all rows and populate result
+    -- and working table
+
+  
   
