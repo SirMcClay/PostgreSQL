@@ -67,6 +67,10 @@ LIMIT 5;
     -- And becouse there is a result we will iterate our recursive query again
     -- And we will of course copy our last result of the last iteration and
     -- copy just this result to our working table after clean-up past data
-  
+  -- STEP 4: Now we repeat the process of join working table with followers table
+    -- and if the conditional depth is satisfied and generate result will 
+    -- take result and repeat the STEP 3
+    -- If conditional is not satisfied and no data is returned the recursive
+    -- loop terminate and outer query will be executed
   
   
