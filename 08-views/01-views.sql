@@ -48,3 +48,11 @@ CREATE VIEW tags AS (
 	UNION ALL
 	SELECT id, created_at, user_id, post_id, 'caption_tag' AS type FROM caption_tags
 );
+-- Now we can do our initial query and within that remove the subquery and
+  -- replace just with the VIEW tags just like that:
+SELECT username, COUNT(*)
+FROM users
+JOIN tags ON tags.user_id = users.id
+GROUP BY username
+ORDER BY COUNT(*) DESC;
+-- We`ve got the exact same result but without the needs to use subquery or UNION
