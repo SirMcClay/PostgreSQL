@@ -61,6 +61,12 @@ LIMIT 5;
     -- follower_id from table followers in which the follower_id is 1000
     -- and assign depth as a fixed value of 1 for all rows and populate result
     -- and working table
-
+  -- STEP 3: Just join leader_id and folloeer_id and depth = 2 from the join of
+    -- working table and the followers table and add to our result table where
+    -- just stand the first result of our statement
+    -- And becouse there is a result we will iterate our recursive query again
+    -- And we will of course copy our last result of the last iteration and
+    -- copy just this result to our working table after clean-up past data
+  
   
   
