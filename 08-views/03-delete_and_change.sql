@@ -10,3 +10,5 @@ CREATE OR REPLACE VIEW recent_posts AS (
 SELECT * FROM recent_posts;
 -- And BAM! we`ve got the 15 recent posts
 
+-- Now delete a VIEW
+DROP VIEW recent_posts;
