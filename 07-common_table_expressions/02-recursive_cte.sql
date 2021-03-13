@@ -52,3 +52,9 @@ FROM suggestions
 JOIN users ON users.id = suggestions.leader_id
 WHERE depth > 1
 LIMIT 5;
+
+-- Now the BREAKDOWN line by line
+  -- STEP 1: We define our results and working table
+    -- Which have 3 column each with leader_id, follower_id and depth
+    -- And of course the name of our recursive CTE which is suggestions
+  
