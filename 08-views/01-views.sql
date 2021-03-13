@@ -41,4 +41,10 @@ FROM caption_tags;
 -- #2 SOLUTION we use a VIEW
   -- A VIEW is simple a fake table that references some rows or data inside 
   -- other tables on our database
-  
+  -- We can do any logic or query inside a view and use on any query as a real table
+  -- So we create a VIEW to solve problem above:
+CREATE VIEW tags AS (
+	SELECT id, created_at, user_id, post_id, 'photo_tag' AS type FROM photo_tags
+	UNION ALL
+	SELECT id, created_at, user_id, post_id, 'caption_tags' AS type FROM caption_tags
+);
