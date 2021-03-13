@@ -32,3 +32,13 @@ FROM photo_tags;
 INSERT INTO tags(created_at, updated_at, user_id, post_id, x, y)
 SELECT created_at, updated_at, user_id, post_id, x, y
 FROM caption_tags;
+
+-- DOWNSIDES #1 solution - 
+  -- We cant copy the ids from both tables because there are duplicated ids
+  -- If we delete both tables after the copy we possible can broke some query
+    -- that use these two tables
+
+-- #2 SOLUTION we use a VIEW
+  -- A VIEW is simple a fake table that references some rows or data inside 
+  -- other tables on our database
+  
