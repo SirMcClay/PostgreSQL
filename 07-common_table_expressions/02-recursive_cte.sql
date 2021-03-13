@@ -72,5 +72,9 @@ LIMIT 5;
     -- take result and repeat the STEP 3
     -- If conditional is not satisfied and no data is returned the recursive
     -- loop terminate and outer query will be executed
-  
+  -- STEP 5: Now the result table turn to suggestions table and the outer query
+    -- will be executed
+    -- We dump the statement rows becouse the depth is 1
+    -- And we join table users with suggestions where leader_id is equal to
+    -- users.id and return columns users.id and users.username
   
