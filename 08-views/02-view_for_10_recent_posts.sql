@@ -6,4 +6,12 @@ CREATE VIEW recent_posts AS (
 	ORDER BY created_at DESC
 	LIMIT 10
 );
+-- If we do the query:
+SELECT * FROM recent_posts;
+-- We result on a 10 most recent posts
 
+-- And we can then join with a users table to show the username of these 10
+  -- most recent posts
+SELECT username
+FROM recent_posts
+JOIN users ON users.id = recent_posts.user_id;
