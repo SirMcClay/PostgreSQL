@@ -27,3 +27,28 @@ FROM countdown;
   -- The recursive query will execute with "val" until the condition is not
     -- true and then will execute the next query showing the result
   -- This recursive CTE is more like a for loop in the world of SQL
+
+-- HERE A PLAUSIBLE USE FOR RECURSIVE COMMON TABLE EXPRESSIONS
+  -- A query to pick suggestions for people to you follow based on the people
+  -- that you just is following and the people that these last is following
+  -- In short you have to see at some depth to the people which you follow
+  -- and the people that they follow and the people that this last follow and
+  -- so on...
+-- See the complexity for a recursive solution?
+
+-- The solution is here:
+WITH RECURSIVE suggestions(leader_id, follower_id, depth) AS (
+		SELECT leader_id, follower_id, 1 AS depth
+		FROM followers
+		WHERE follower_id = 1000
+	UNION
+		SELECT followers.leader_id, followers.follower_id, depth + 1
+		FROM followers
+		JOIN suggestions ON suggestions.leader_id = followers.follower_id
+		WHERE depth < 3
+)
+SELECT DISTINCT users.id, users.username
+FROM suggestions
+JOIN users ON users.id = suggestions.leader_id
+WHERE depth > 1
+LIMIT 5;
