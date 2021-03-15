@@ -11,5 +11,5 @@ CREATE TABLE accounts (
 -- Create two rows with Gia and Alyson accounts and balances
 INSERT INTO accounts (name, balance)
 VALUES
-	('Gia', 100)
+	('Gia', 100),
 	('Alyson', 100);
