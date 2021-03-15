@@ -35,4 +35,6 @@ SELECT * FROM weekly_likes;
   -- stored on materialized view will remain the same until we tell to refresh
   -- the data
 
-
+-- REFRESH THE DATA ON MATERIALIZED VIEW
+  -- This is the way we can update the data stored inside materialized view
+REFRESH MATERIALIZED VIEW weekly_likes;
