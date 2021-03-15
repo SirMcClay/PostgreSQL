@@ -1,0 +1,3 @@
+-- MATERIALIZED VIEWS are usefull for run from time to time a specific VERY
+  -- SLOW QUERY which store the result for be used without the need to be run
+  -- just accessing the last result materialized by the view
