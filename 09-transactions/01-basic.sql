@@ -13,3 +13,18 @@ INSERT INTO accounts (name, balance)
 VALUES
 	('Gia', 100),
 	('Alyson', 100);
+
+-- OPEN A SECOND QUERY TOOL ON PGADMIN
+
+-- NOTE!! - Every query tool is a isolated connection with database therefore
+  -- we can run transactions on each panel isolated
+
+-- ON THE FIRST QUERY TOOL
+  -- Begin a transaction:
+  BEGIN;
+  -- Update data
+  UPDATE accounts
+  SET balance = balance - 50
+  WHERE name = 'Alyson';
+  -- See if data was changed
+  SELECT * FROM accounts;
