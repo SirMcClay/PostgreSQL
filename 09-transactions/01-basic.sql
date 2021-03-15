@@ -7,3 +7,9 @@ CREATE TABLE accounts (
 	name VARCHAR(20) NOT NULL,
 	balance INTEGER NOT NULL
 );
+
+-- Create two rows with Gia and Alyson accounts and balances
+INSERT INTO accounts (name, balance)
+VALUES
+	('Gia', 100)
+	('Alyson', 100);
