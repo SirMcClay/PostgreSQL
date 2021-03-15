@@ -28,3 +28,7 @@ VALUES
   WHERE name = 'Alyson';
   -- See if data was changed
   SELECT * FROM accounts;
+
+-- ON THE SECOND QUERY TOOL
+  -- Query the data from accounts and you will see that the data remain the original
+  SELECT * FROM accounts;
