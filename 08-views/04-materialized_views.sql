@@ -30,3 +30,9 @@ CREATE MATERIALIZED VIEW weekly_likes AS (
 ) WITH DATA;
 -- Now see the data with more fast execution and result
 SELECT * FROM weekly_likes;
+
+-- IMPORTANT NOTE!! - If we DELETE some data from posts or comments the data
+  -- stored on materialized view will remain the same until we tell to refresh
+  -- the data
+
+
