@@ -32,3 +32,11 @@ VALUES
 -- ON THE SECOND QUERY TOOL
   -- Query the data from accounts and you will see that the data remain the original
   SELECT * FROM accounts;
+
+-- ON THE FIRST QUERY TOOL
+  -- Update Gia balance adding 50
+  UPDATE accounts
+  SET balance = balance + 50
+  WHERE name = 'Gia';
+  -- See the result
+  SELECT * FROM accounts;
