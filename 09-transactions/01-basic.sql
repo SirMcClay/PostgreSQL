@@ -40,3 +40,7 @@ VALUES
   WHERE name = 'Gia';
   -- See the result
   SELECT * FROM accounts;
+
+-- Now on first query tool Alyson has 50 and Gia has 150
+  -- but on second query tool Alyson has 100 and Gia has 100 as originally made
+
