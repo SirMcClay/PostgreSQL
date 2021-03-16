@@ -1,0 +1,5 @@
+-- SCHEMA MIGRATION
+  -- Come to help us to solve two big problems
+    -- 1 - Changes on DB and API client need to be made on the same time
+    -- 2 - When working on a team of engineers we need a way to tie the DB changes
+      -- to our code
