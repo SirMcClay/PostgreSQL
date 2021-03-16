@@ -52,7 +52,10 @@ COMMIT;
   -- mantained as the original to all connections
 ROLLBACK;
 
--- NOTE!! - If some error occur during transaction execution Postgres will
+-- NOTE!! - ABORT STATE - If some error occur during transaction execution Postgres will
   -- automatically enter on a ABORT state then you can run a ROLLBACK keyword
   -- to cancel all transaction commands and operations
 ROLLBACK;
+
+-- NOTE!! - LOST CONNECTION - If this occur Postgresql will outomatcally cancel
+  -- the transaction
