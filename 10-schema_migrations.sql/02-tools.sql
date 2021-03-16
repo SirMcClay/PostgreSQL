@@ -7,4 +7,5 @@
   -- this becouse the migration libraries has a bunch of internals assumptions
   -- that be faster obscure for you and maybe put you on a dark spot where you
   -- may not have knowledge of whats going on
+  -- SO, STICK TO RAW SQL!!
 
