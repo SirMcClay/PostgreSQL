@@ -47,3 +47,7 @@ VALUES
 -- COMMIT - If you want to take these changes persisted for every connection and
   -- saved on database
 COMMIT;
+
+-- ROLLBACK - If you dont want to save these changes then the data will be
+  -- mantained as the original to all connections
+ROLLBACK;
