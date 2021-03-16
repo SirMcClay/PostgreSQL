@@ -51,3 +51,8 @@ COMMIT;
 -- ROLLBACK - If you dont want to save these changes then the data will be
   -- mantained as the original to all connections
 ROLLBACK;
+
+-- NOTE!! - If some error occur during transaction execution Postgres will
+  -- automatically enter on a ABORT state then you can run a ROLLBACK keyword
+  -- to cancel all transaction commands and operations
+ROLLBACK;
