@@ -1,4 +1,6 @@
 /* eslint-disable camelcase */
+// COMMAND TO EXECUTE THIS MIGRATION
+// --> DATABASE_URL=postgres://postgres:postgres@localhost:5432/socialnetwork npm run migrate up
 
 exports.shorthands = undefined;
 
@@ -6,8 +8,8 @@ exports.up = (pgm) => {
 	pgm.sql(`
     CREATE TABLE comments (
       id SERIAL PRIMARY KEY,
-      created_at TIMESTAMP WITH TIME ZONE CURRENT_TIMESTAMP,
-      updated_at TIMESTAMP WITH TIME ZONE CURRENT_TIMESTAMP,
+      created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
       contents VARCHAR(240) NOT NULL
     );
   `);
