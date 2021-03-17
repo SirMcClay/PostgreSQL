@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
-// COMMAND TO EXECUTE THIS MIGRATION
-// --> DATABASE_URL=postgres://postgres:postgres@localhost:5432/socialnetwork npm run migrate up
+// COMMAND TO EXECUTE MIGRATIONS
+// UP --> DATABASE_URL=postgres://postgres:postgres@localhost:5432/socialnetwork npm run migrate up
+// DOWN --> DATABASE_URL=postgres://postgres:postgres@localhost:5432/socialnetwork npm run migrate down
 
 exports.shorthands = undefined;
 
