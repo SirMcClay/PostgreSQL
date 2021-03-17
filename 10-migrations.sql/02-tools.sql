@@ -9,3 +9,4 @@
   -- may not have knowledge of whats going on
   -- SO, STICK TO RAW SQL!!
 
+-- To view migrations in action see the work folder node-project-migration
