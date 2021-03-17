@@ -55,6 +55,14 @@ app.get('/posts', async (req, res) => {
   `);
 });
 
+app.post('/posts', async (req, res) => {
+	const { lng, lat } = req.body;
+
+	await pool.query('INSERT INTO posts (lat, lng) VALUES ($1, $2);', [lat, lng]);
+
+	res.redirect('/posts');
+});
+
 app.listen(3005, () => {
 	console.log('Listening on port 3005');
 });
