@@ -1,0 +1,5 @@
+-- TRANSACTION LOCK
+  -- The LOCK behavior of a transaction consists in a running transaction
+  -- block the row to another update operations until the transaction running
+  -- ended and commit.
+  -- So the row is unlocked and another operation or transaction can do his job
