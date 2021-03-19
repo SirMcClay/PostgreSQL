@@ -13,8 +13,9 @@ class Pool {
 	}
 
 	// REALLY BIG SECURITY ISSUE HERE
-	query(sql) {
-		return this._pool.query(sql);
+	// SOLVED WITH PG PREPARATION
+	query(sql, params) {
+		return this._pool.query(sql, params);
 	}
 }
 
