@@ -2,4 +2,9 @@ http://localhost:3005/users
 
 ###
 
-http://localhost:3005/users
+http://localhost:3005/users/1
+
+###
+
+# SECURITY ISSUE IN ACTION!!! SQL INJECTION IS REALLY BAD!
+http://localhost:3005/users/1;DROP TABLE users;
