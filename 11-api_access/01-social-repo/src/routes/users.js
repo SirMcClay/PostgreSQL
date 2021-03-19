@@ -1,4 +1,5 @@
 const express = require('express');
+const pool = require('../pool');
 const UserRepo = require('../repos/user-repo');
 
 const router = express.Router();
@@ -32,7 +33,14 @@ router.post('/users', async (req, res) => {
 	res.send(user);
 });
 
-router.put('/users/:id', async (req, res) => {});
+router.put('/users/:id', async (req, res) => {
+	const { id } = req.params;
+	const { username, bio } = req.body;
+
+	const user = await UserRepo.update(id, username, bio);
+
+	res.send(user);
+});
 
 router.delete('/users/:id', async (req, res) => {});
 
