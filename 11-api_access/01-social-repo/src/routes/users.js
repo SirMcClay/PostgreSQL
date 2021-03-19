@@ -24,7 +24,11 @@ router.get('/users/:id', async (req, res) => {
 	}
 });
 
-router.post('/users', async (req, res) => {});
+router.post('/users', async (req, res) => {
+	console.log(req.body);
+
+	res.send('');
+});
 
 router.put('/users/:id', async (req, res) => {});
 
