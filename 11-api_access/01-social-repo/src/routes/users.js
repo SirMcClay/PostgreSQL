@@ -39,7 +39,11 @@ router.put('/users/:id', async (req, res) => {
 
 	const user = await UserRepo.update(id, username, bio);
 
-	res.send(user);
+	if (user) {
+		res.send(user);
+	} else {
+		res.sendStatus(404);
+	}
 });
 
 router.delete('/users/:id', async (req, res) => {});
