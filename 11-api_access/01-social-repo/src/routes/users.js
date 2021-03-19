@@ -13,7 +13,7 @@ router.get('/users', async (req, res) => {
 });
 
 router.get('/users/:id', async (req, res) => {
-	const { id } = req.param;
+	const { id } = req.params;
 
 	const user = await UserRepo.findById(id);
 
