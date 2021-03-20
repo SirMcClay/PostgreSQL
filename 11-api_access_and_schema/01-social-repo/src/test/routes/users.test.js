@@ -1,12 +1,11 @@
 const request = require('supertest');
 const buildApp = require('../../app');
 const UserRepo = require('../../repos/user-repo');
-const pool = require('../../pool');
 const Context = require('../context');
 
 let context;
 
-beforeAll(() => {
+beforeAll(async () => {
 	context = await Context.build();
 });
 
