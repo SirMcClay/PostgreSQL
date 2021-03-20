@@ -1,6 +1,17 @@
 const request = require('supertest');
 const buildApp = require('../../app');
 const UserRepo = require('../../repos/user-repo');
+const pool = require('../../pool');
+
+beforeAll(() => {
+	return pool.connect({
+		host: 'localhost',
+		port: 5432,
+		database: 'socialnetwork',
+		user: 'postgres',
+		password: 'postgres',
+	});
+});
 
 it('create a user', async () => {
 	const startingCount = await UserRepo.count();
