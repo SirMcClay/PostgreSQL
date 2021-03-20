@@ -64,6 +64,13 @@ class Context {
 		this.roleName = roleName;
 	}
 
+	async reset() {
+		// Delete all data from possible tables
+		return pool.query(`
+      DELETE FROM users; 
+    `);
+	}
+
 	async close() {
 		// Disconnect from PG
 		await pool.close();
