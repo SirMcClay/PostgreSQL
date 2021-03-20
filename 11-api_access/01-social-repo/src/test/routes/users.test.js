@@ -13,6 +13,10 @@ beforeAll(() => {
 	});
 });
 
+afterAll(() => {
+	return pool.close();
+});
+
 it('create a user', async () => {
 	const startingCount = await UserRepo.count();
 	expect(startingCount).toEqual(0);
